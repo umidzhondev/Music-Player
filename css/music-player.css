@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("../font/Poppins-Medium.ttf");
+}
+body {
+  box-sizing: border-box;
+  font-family: Poppins;
+  font-weight: 500;
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: linear-gradient(45deg, rgb(34, 200, 187), rgb(68, 0, 255));
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40vw;
+  margin: 50px auto;
+  background-color: #111;
+  border-radius: 20px;
+  padding: 3rem 4rem 3rem 4rem;
+}
+.logo {
+  border-radius: 50%;
+  position: relative;
+  width: 250px;
+  text-align: center;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  color: #fff;
+  transition: transform 0.7s ease-in-out;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  border: 7px solid crimson;
+  border-radius: 50%;
+  animation-iteration-count: infinite;
+}
+.logo.animated {
+  animation-name: rotateLogo;
+}
+.logo-text {
+  z-index: 9999;
+  font-size: 1.5rem;
+}
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    border: 7px solid rgb(20, 220, 193);
+    border-radius: 50%;
+  }
+  50% {
+    border: 7px solid rgb(107, 20, 220);
+    border-radius: 50%;
+  }
+  75% {
+    border: 7px solid rgb(20, 220, 113);
+    border-radius: 50%;
+  }
+  100% {
+    border: 7px solid rgb(220, 20, 113);
+    transform: rotate(360deg);
+    border-radius: 50%;
+  }
+}
+.author{
+  text-align: center;
+  color: #111;
+  font-size: 2rem;
+}
+.text {
+  margin-bottom: 100px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: aqua;
+  padding: 2rem 6rem;
+  /* height: 2.2rem; */
+  margin-top: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+.logo img {
+  width: 150px;
+  height: 150px;
+}
+.music-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  border: 2px solid aqua;
+  width: 40vw;
+}
+.music-box > svg {
+  margin: 0 2.5rem;
+  width: 64px;
+  height: 64px;
+  transition: all 0.5s ease-in-out;
+  color: crimson;
+  border-radius: 50%;
+}
+#pause:hover,
+#play:hover {
+  box-shadow: 0 0 10px 9px rgb(5, 246, 45);
+}
+.music-box > svg:hover {
+  transform: scale(1.1);
+}
+.music-box > svg:active {
+  transform: scale(0.6);
+}
+#blue:hover {
+  box-shadow: 0 0 10px 9px rgb(0, 225, 255);
+}
+
+@media screen and (max-width:1200px){
+    .main{
+        width: 70vw;
+    }
+    .title{
+        margin-bottom: 1rem;
+    }
+    .logo{
+        width: 300px;
+        height: 300px;
+    }
+    .logo img{
+        width: 170px;
+        height: 170px;
+    }
+    .text{
+        margin-bottom: 70px;
+    }
+    .music-box{
+        width: 63vw;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .main{
+        width: 70vw;
+    }
+    .text{
+        margin-bottom: 100px;
+        padding: 2rem 3rem;
+    }
+    .title{
+        margin-bottom: 2rem;
+    }
+    .logo{
+        width: 230px;
+        height: 230px;
+    }
+    .logo img{
+        width: 130px;
+        height: 130px;
+    }
+    .music-box{
+        padding: 2.2rem 4rem;
+    }
+}
+
+@media screen and (max-width:768px){
+    .main{
+        padding: 2.5rem;
+    }
+    .text{
+        font-size: 1.5rem;
+        padding: 1.2rem 0;
+    }
+    .logo{
+        width: 200px;
+        height: 200px;
+    }
+    .logo img{
+        width: 100px;
+        height: 100px;
+    }
+    .music-box{
+        padding: 1rem;
+    }
+    .music-box > svg{
+        margin: 0 1.7rem;
+    }
+}
+@media screen and (max-width:578px) {
+    .title{
+        font-size: 1.5rem;
+    }
+    .text{
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        padding: 1.2rem 0 1rem 0;
+        margin-bottom: 70px;
+    }
+    .music-box > svg{
+        width: 50px;
+        height: 50px;
+    }
+    .author{
+      font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:480px) {
+    .main {
+        padding: 1.2rem;
+        width: 80vw;
+    }
+    .title{
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+    .logo{
+        width: 160px;
+        height: 160px;
+    }
+    .logo img{
+        width: 90px;
+        height: 90px;
+    }
+    .music-box > svg{
+        width: 35px;
+        height: 35px;
+    }
+    .author{
+      font-size: 1.3rem;
+    }
+}
+@media screen and (max-width:400px) {
+    .logo{
+        width: 140px;
+        height: 140px;
+    }
+    .logo img{
+        width: 80px;
+        height: 80px;
+    }
+    .music-box > svg{
+        width: 40px;
+        height: 40px;
+        margin: .7rem ;
+        padding: 0;
+    }
+    .author{
+      font-size: 1.2rem;
+    }
+}
